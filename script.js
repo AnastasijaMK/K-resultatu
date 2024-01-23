@@ -217,16 +217,37 @@ for(let i=0; i<formButtonSent.length; i++) {
             const form = formButtonSent[i].closest('form');
             const formFields = form.querySelectorAll('.field__input');
             let buttonActive = true;
+            let readyToFillFormTimer;
             for(let l=0; l<formFields.length; l++) {
                 formFields[l].closest('.form__field').classList.remove('warning');
                 if(formFields[l].getAttribute('required') == 'true' && formFields[l].value.trim() == '') {
                     formFields[l].closest('.form__field').classList.add('warning');
                     buttonActive = false;
                 }
+                formFields[l].addEventListener('click',()=>{
+                    formFields[l].closest('.form__field').classList.remove('warning');
+                    clearTimeout(readyToFillFormTimer);
+                    formButtonSent[i].querySelector('.button__text').innerText = 'Отправить заявку';
+                    formButtonSent[i].classList.remove('active');
+                });
+                formFields[l].addEventListener('change',()=>{
+                    formFields[l].closest('.form__field').classList.remove('warning');
+                    clearTimeout(readyToFillFormTimer);
+                    formButtonSent[i].querySelector('.button__text').innerText = 'Отправить заявку';
+                    formButtonSent[i].classList.remove('active');
+                });
             }
             if(buttonActive) {
                 formButtonSent[i].classList.add('active');
+                for(let l=0; l<formFields?.length; l++) {
+                    formFields[l].closest('.form__field').classList.remove('warning');
+                    formFields[l].value = '';
+                }
                 formButtonSent[i].querySelector('.button__text').innerText = 'Заявка отправлена';
+                readyToFillFormTimer = setTimeout(()=>{
+                    formButtonSent[i].querySelector('.button__text').innerText = 'Отправить заявку';
+                    formButtonSent[i].classList.remove('active');
+                }, 3000);
             }
         }
     });
