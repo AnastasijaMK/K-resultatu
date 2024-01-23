@@ -225,8 +225,29 @@ for(let i=0; i<formButtonSent.length; i++) {
                 }
             }
             if(buttonActive) {
-                formButtonSent[i].classList.add('active');
-                formButtonSent[i].querySelector('.button__text').innerText = 'Заявка отправлена';
+                var xhr = new XMLHttpRequest();
+                var url = 'form_send.php';
+                var params = 'fio=' + form.querySelector('input[name="NAME"]').value +
+                    '&phone=' + form.querySelector('input[name="PHONE"]').value;
+
+                xhr.open('POST', url, true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+
+                        // Обработка ответа сервера
+                        console.log(response);
+                        console.log(response['success']);
+                        if(response['success']) {
+                            formButtonSent[i].classList.add('active');
+                            formButtonSent[i].querySelector('.button__text').innerText = 'Заявка отправлена';
+                        }
+                    }
+                };
+
+                xhr.send(params);
             }
         }
     });
