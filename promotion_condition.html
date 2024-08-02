@@ -5,37 +5,76 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, user-scalable=0"
+            content="width=device-width, initial-scale=1.0"
         />
-        <link rel="icon" type="image/png" href="img/favicon6.png" />
+        <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
         <title>Приведи друга - получите скидку оба!</title>
 
+        <meta name="robots" content="noindex">
+
         <link rel="stylesheet" href="lib/css/slick.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.min.css" />
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(96593274, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/96593274" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper wrapper--noindex">
             <header class="header">
                 <div class="container header__container">
                     <div class="header__left">
-                        <div class="logo header__logo">
+                        <div class="logo header__logo no-md">
                             <a
-                                href="/"
-                                title="Учебный центр 'Результат' - подготовка к ЕГЭ, ОГЭ и ВПР"
+                                    href="/"
+                                    title="Учебный центр 'К результату' - подготовка к ЕГЭ, ОГЭ и ВПР"
+                            >
+                                <picture>
+                                    <img
+                                            src="img/logo_without_rocket.svg"
+                                            alt="Логотип - Учебный центр 'К результату'"
+                                    />
+                                </picture>
+                                <picture class="logo__rocket">
+                                    <img
+                                            src="img/rocket_in_logo.svg"
+                                            alt="Логотип - Учебный центр 'К результату'"
+                                    />
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="logo header__logo md">
+                            <a
+                                    href="/"
+                                    title="Учебный центр 'К результату' - подготовка к ЕГЭ, ОГЭ и ВПР"
                             >
                                 <picture>
                                     <source
-                                        srcset="img/logo_mobile.svg"
-                                        media="(max-width: 767px)"
+                                            srcset="img/logo_mobile.svg"
+                                            media="(max-width: 767px)"
                                     />
                                     <source
-                                        srcset="img/logo_tablet.svg"
-                                        media="(max-width: 1199px)"
+                                            srcset="img/logo_tablet.svg"
+                                            media="(max-width: 1199px)"
                                     />
                                     <source srcset="img/logo.svg" />
                                     <img
-                                        src="img/logo.svg"
-                                        atl="Логотип - Учебный центр 'Результат'"
+                                            src="img/logo.svg"
+                                            alt="Логотип - Учебный центр 'К результату'"
                                     />
                                 </picture>
                             </a>
@@ -43,36 +82,36 @@
                         <nav class="menu header__menu no-md">
                             <ul class="menu__list">
                                 <li class="menu__item menu__item_highlighted">
-                                    <a href="#promotion" class="menu__link">
+                                    <a href="/#promotion" class="menu__link">
                                         <span class="menu__text">Акции</span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#subjects" class="menu__link">
+                                    <a href="/#subjects" class="menu__link">
                                         <span class="menu__text">Предметы</span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#format" class="menu__link">
+                                    <a href="/#format" class="menu__link">
                                         <span class="menu__text"
                                             >Формат занятий</span
                                         >
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#advantages" class="menu__link">
+                                    <a href="/#advantages" class="menu__link">
                                         <span class="menu__text"
                                             >Преимущества</span
                                         >
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#about" class="menu__link">
+                                    <a href="/#about" class="menu__link">
                                         <span class="menu__text">О нас</span>
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#contacts" class="menu__link">
+                                    <a href="/#contacts" class="menu__link">
                                         <span class="menu__text">Контакты</span>
                                     </a>
                                 </li>
@@ -97,61 +136,13 @@
                 </div>
             </header>
             <main>
-                <style>
-                    .header {
-                        position: relative;
-                    }
-                    main {
-                        max-height: none;
-                        min-height: calc(100vh - 220px);
-                        min-height: calc(var(--vh, 1vh) * 100 - 220px);
-                        overflow: auto;
-                        scroll-snap-type: unset;
-                    }
-                    .footer {
-                        background: linear-gradient(180deg, #394F6F 0%, #08234B 100%);
-                    }
-                    footer p {
-                        padding-top: 20px;
-                        margin-top: 20px;
-                        border-top: 1px solid rgba(255, 255, 255, 0.2);
-                        text-align: center;
-                    }
-                    .footer .container {
-                        padding: 20px 50px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        position: relative;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 18px;
-                        color: #FFFFFF;
-                    }
-                    @media only screen and (max-width: 1199px) {
-                        .header {
-                            position: fixed;
-                        }
-                        main {
-                            min-height: calc(100vh - 124px);
-                            min-height: calc(var(--vh, 1vh) * 100 - 124px);
-                        }
-                    }
-                    @media only screen and (max-width: 767px) {
-                        main {
-                            min-height: calc(100vh - 105px);
-                            min-height: calc(var(--vh, 1vh) * 100 - 105px);
-                        }
-                        .footer .container {
-                            padding: 15px 20px;
-                            font-size: 12px;
-                            line-height: 14px;
-                        }
-                    }
-                </style>
                 <div class="page_text_wrap">
                     <div class="container section__container">
+                        <div class="breadcrumb">
+                            <a href="/" class="breadcrumb__item">Главная</a>
+                            <span class="breadcrumb__separator">&mdash;</span>
+                            <span class="breadcrumb__item">Акция "Приведи друга - получите скидку оба"</span>
+                        </div>
                         <h1>Акция<br class="no-xs"> "Приведи друга - получите скидку оба"</h1>
                         <p>Дарим возможность получить приятный бонус Вам и Вашим друзьям на одну услугу в нашем учебном центре!</p>
 
@@ -188,6 +179,7 @@
                             <li><p><a href="https://t.me/resultat_nn" target="_blank" class="link--no-view">resultat_nn - Telegram</a></p></li>
                         </ul>
                         <p>Двигаться к результату проще вместе!</p>
+                        <a href="/" class="back-to-main">&larr; На главную</a>
                     </div>
                 </div>
 
@@ -198,41 +190,63 @@
                             <div class="popup__menu">
                                 <ul class="menu__list">
                                     <li class="menu__item menu__item_highlighted">
-                                        <a href="#promotion" class="menu__link">
+                                        <a href="/#promotion" class="menu__link">
                                             <span class="menu__text">Акции</span>
                                         </a>
                                     </li>
                                     <li class="menu__item">
-                                        <a href="#subjects" class="menu__link">
+                                        <a href="/#subjects" class="menu__link">
                                             <span class="menu__text">Направления подготовки</span>
                                         </a>
                                     </li>
                                     <li class="menu__item">
-                                        <a href="#format" class="menu__link">
+                                        <a href="/#format" class="menu__link">
                                             <span class="menu__text"
                                                 >Формат занятий</span
                                             >
                                         </a>
                                     </li>
                                     <li class="menu__item">
-                                        <a href="#advantages" class="menu__link">
+                                        <a href="/#advantages" class="menu__link">
                                             <span class="menu__text"
                                                 >Преимущества</span
                                             >
                                         </a>
                                     </li>
                                     <li class="menu__item">
-                                        <a href="#about" class="menu__link">
+                                        <a href="/#about" class="menu__link">
                                             <span class="menu__text">О нас</span>
                                         </a>
                                     </li>
                                     <li class="menu__item">
-                                        <a href="#contacts" class="menu__link">
+                                        <a href="/#contacts" class="menu__link">
                                             <span class="menu__text">Контакты</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
+                            <ul class="menu__list menu__list--additional">
+                                <li class="menu__item">
+                                    <a href="policy.html" target="_blank" class="menu__link">
+                                        <span class="menu__text">Политика обработки персональных данных</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="agreement.html" target="_blank" class="menu__link">
+                                        <span class="menu__text">Согласие на обработку персональных данных</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="user_agreement.html" target="_blank" class="menu__link">
+                                        <span class="menu__text">Пользовательское соглашение</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="authors.html" target="_blank" class="menu__link">
+                                        <span class="menu__text">Авторство изображений и графики</span>
+                                    </a>
+                                </li>
+                            </ul>
                             <div class="popup__social">
                                 <div class="social">
                                     <div class="social-block">
@@ -279,105 +293,105 @@
                 <!-- <noindex> -->
                 <div class="popup popup--form">
                     <div class="popup__close"></div>
-                    <p class="popup__title">Оставить заявку на обучение<br> в учебном центре «К результату»!</p>
+                    <p class="popup__title">Оставить заявку на обучение<br> в учебном центре «К&nbsp;результату»!</p>
                     <p class="popup__subtitle">Отправьте заявку, чтобы мы могли в ближайшее время ответить на все интересующие Вас вопросы.</p>
-                    <form action="">
+                    <form>
                         <div class="form__field field">
                             <label>
                                 <input
-                                    type="text"
-                                    class="field__input"
-                                    required = true
-                                    name="NAME"
-                                    placeholder="Имя Фамилия..."
+                                        type="text"
+                                        class="field__input"
+                                        required
+                                        name="NAME"
+                                        placeholder="Имя Фамилия..."
                                 />
-                                <div class="field__icon">
+                                <span class="field__icon">
                                     <img
-                                        src="img/form_icon1.svg"
-                                        alt="Имя Фамилия"
+                                            src="img/form_icon1.svg"
+                                            alt="Имя Фамилия"
                                     />
                                     <img
-                                        src="img/form_icon_active1.svg"
-                                        alt="Имя Фамилия"
+                                            src="img/form_icon_active1.svg"
+                                            alt="Имя Фамилия"
                                     />
-                                </div>
-                                <span class="field__error">Заполните это поле</span>
+                                </span>
+                                <span class="field__error" data-field-text="Заполните это поле">Заполните это поле</span>
                             </label>
                         </div>
                         <div class="form__field field">
                             <label>
                                 <input
-                                    type="tel"
-                                    class="field__input"
-                                    required = true
-                                    name="PHONE"
-                                    placeholder="+7 (999) 999-99-99"
+                                        type="tel"
+                                        class="field__input"
+                                        required
+                                        name="PHONE"
+                                        placeholder="+7 (999) 999-99-99"
                                 />
-                                <div class="field__icon">
+                                <span class="field__icon">
                                     <img
-                                        src="img/form_icon2.svg"
-                                        alt="Телефон"
+                                            src="img/form_icon2.svg"
+                                            alt="Телефон"
                                     />
                                     <img
-                                        src="img/form_icon_active2.svg"
-                                        alt="Телефон"
+                                            src="img/form_icon_active2.svg"
+                                            alt="Телефон"
                                     />
-                                </div>
-                                <span class="field__error">Заполните это поле</span>
+                                </span>
+                                <span class="field__error" data-field-text="Заполните это поле">Заполните это поле</span>
                             </label>
                         </div>
                         <div
-                            class="form__field field field--select"
+                                class="form__field field field--select"
                         >
                             <label>
                                 <input
-                                    type="text"
-                                    class="field__input"
-                                    name="SUBJECT"
-                                    placeholder="Направление подготовки..."
-                                    readonly
+                                        type="text"
+                                        class="field__input"
+                                        name="SUBJECT"
+                                        placeholder="Направление подготовки..."
+                                        readonly
                                 />
-                                <div class="field__icon">
+                                <span class="field__icon">
                                     <img
-                                        src="img/form_icon3.svg"
-                                        alt="Направление подготовки"
+                                            src="img/form_icon3.svg"
+                                            alt="Направление подготовки"
                                     />
                                     <img
-                                        src="img/form_icon_active3.svg"
-                                        alt="Направление подготовки"
+                                            src="img/form_icon_active3.svg"
+                                            alt="Направление подготовки"
                                     />
-                                </div>
+                                </span>
                             </label>
                             <div class="field__list_wrap">
                                 <div class="field__list">
                                     <div class="field__list_inner">
                                         <label
-                                            class="field__checkbox"
+                                                class="field__checkbox"
                                         >
                                             <input
-                                                type="checkbox" name="SUBJECT_TYPE" value="Математика"
+                                                    type="checkbox" name="SUBJECT_TYPE" value="Математика"
                                             />
                                             <span
-                                                class="field__box"
+                                                    class="field__box"
                                             >
                                                 <span
-                                                    class="field__option"
-                                                    >Математика</span
+                                                        class="field__option"
+                                                >Математика</span
                                                 >
                                             </span>
                                         </label>
                                         <label
-                                            class="field__checkbox"
+                                                class="field__checkbox"
                                         >
                                             <input
-                                                type="checkbox" name="SUBJECT_TYPE" value="Физика"
+                                                    type="checkbox" name="SUBJECT_TYPE" value="Физика"
                                             />
                                             <span
-                                                class="field__box"
+                                                    class="field__box"
                                             >
                                                 <span
-                                                    class="field__option"
-                                                    >Физика</span
+                                                        class="field__option"
+                                                >Физика</span
                                                 >
                                             </span>
                                         </label>
@@ -388,33 +402,32 @@
                                             </span>
                                         </label>
                                         <label
-                                            class="field__checkbox"
+                                                class="field__checkbox"
                                         >
                                             <input
-                                                type="checkbox" name="SUBJECT_TYPE" value="Английский язык"
+                                                    type="checkbox" name="SUBJECT_TYPE" value="Литература"
                                             />
                                             <span
-                                                class="field__box"
+                                                    class="field__box"
                                             >
                                                 <span
-                                                    class="field__option"
-                                                    >Английский
-                                                    язык</span
+                                                        class="field__option"
+                                                >Литература</span
                                                 >
                                             </span>
                                         </label>
                                         <label
-                                            class="field__checkbox"
+                                                class="field__checkbox"
                                         >
                                             <input
-                                                type="checkbox" name="SUBJECT_TYPE" value="Информатика"
+                                                    type="checkbox" name="SUBJECT_TYPE" value="Обществознание"
                                             />
                                             <span
-                                                class="field__box"
+                                                    class="field__box"
                                             >
                                                 <span
-                                                    class="field__option"
-                                                    >Информатика</span
+                                                        class="field__option"
+                                                >Обществознание</span
                                                 >
                                             </span>
                                         </label>
@@ -423,195 +436,181 @@
                             </div>
                         </div>
                         <div
-                            class="form__field field field--select"
+                                class="form__field field field--select"
                         >
                             <label>
                                 <input
-                                    type="text"
-                                    class="field__input"
-                                    name="CLASS"
-                                    placeholder="Класс..."
-                                    readonly
+                                        type="text"
+                                        class="field__input"
+                                        name="CLASS"
+                                        placeholder="Класс / курс..."
+                                        readonly
                                 />
-                                <div class="field__icon">
+                                <span class="field__icon">
                                     <img
-                                        src="img/form_icon4.svg"
-                                        alt="Класс"
+                                            src="img/form_icon4.svg"
+                                            alt="Класс"
                                     />
                                     <img
-                                        src="img/form_icon_active4.svg"
-                                        alt="Класс"
+                                            src="img/form_icon_active4.svg"
+                                            alt="Класс"
                                     />
-                                </div>
+                                </span>
                             </label>
                             <div class="field__list_wrap">
                                 <div class="field__list">
                                     <div class="field__list_inner">
-                                        <label
-                                            class="field__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                value="6"
-                                                name="CLASS_GRADE"
-                                            />
-                                            <span
-                                                class="field__box"
-                                            >
-                                                <span
-                                                    class="field__option"
-                                                    >6</span
-                                                >
-                                            </span>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="4 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">4 класс</span>
+                                    </span>
                                         </label>
-                                        <label
-                                            class="field__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                value="7"
-                                                name="CLASS_GRADE"
-                                            />
-                                            <span
-                                                class="field__box"
-                                            >
-                                                <span
-                                                    class="field__option"
-                                                    >7</span
-                                                >
-                                            </span>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="5 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">5 класс</span>
+                                    </span>
                                         </label>
-                                        <label
-                                            class="field__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                value="8"
-                                                name="CLASS_GRADE"
-                                            />
-                                            <span
-                                                class="field__box"
-                                            >
-                                                <span
-                                                    class="field__option"
-                                                    >8</span
-                                                >
-                                            </span>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="6 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">6 класс</span>
+                                    </span>
                                         </label>
-                                        <label
-                                            class="field__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                value="9"
-                                                name="CLASS_GRADE"
-                                            />
-                                            <span
-                                                class="field__box"
-                                            >
-                                                <span
-                                                    class="field__option"
-                                                    >9</span
-                                                >
-                                            </span>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="7 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">7 класс</span>
+                                    </span>
                                         </label>
-                                        <label
-                                            class="field__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                value="10"
-                                                name="CLASS_GRADE"
-                                            />
-                                            <span
-                                                class="field__box"
-                                            >
-                                                <span
-                                                    class="field__option"
-                                                    >10</span
-                                                >
-                                            </span>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="8 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">8 класс</span>
+                                    </span>
                                         </label>
-                                        <label
-                                            class="field__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                value="11"
-                                                name="CLASS_GRADE"
-                                            />
-                                            <span
-                                                class="field__box"
-                                            >
-                                                <span
-                                                    class="field__option"
-                                                    >11</span
-                                                >
-                                            </span>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="9 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">9 класс</span>
+                                    </span>
+                                        </label>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="10 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">10 класс</span>
+                                    </span>
+                                        </label>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="11 класс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">11 класс</span>
+                                    </span>
+                                        </label>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="1 курс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">1 курс</span>
+                                    </span>
+                                        </label>
+                                        <label class="field__checkbox">
+                                            <input type="checkbox" value="2 курс" name="CLASS_GRADE"/>
+                                            <span class="field__box">
+                                        <span class="field__option">2 курс</span>
+                                    </span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <button
-                            class="button section__button button-send-form"
+                                class="button section__button button-send-form"
                         >
                             <span class="button__text"
-                                >Отправить заявку</span
+                            >Отправить заявку</span
                             >
                         </button>
                         <div class="form__agreement">
                             Нажимая на кнопку, Вы даете согласие<br />
                             на
                             <a
-                                href="javascript:void(0);"
-                                target="_blank"
-                                >обработку своих персональных
+                                    href="agreement.html"
+                                    target="_blank"
+                            >обработку своих персональных
                                 данных</a
                             >
                         </div>
                     </form>
                 </div>
                 <!-- </noindex> -->
+                <!-- <noindex> -->
+                <div class="popup__cookies">
+                    <p class="cookies__text">Мы используем cookie. Это позволяет нам анализировать взаимодействие посетителей с сайтом и делать его лучше. Продолжая пользоваться сайтом, вы
+                        <a href="/stat_agreement.html" target="_blank">соглашаетесь с использованием файлов cookie</a>.</p>
+                    <button class="cookies__button button"><span class="button__text">Принять и закрыть</span></button>
+                </div>
+                <!-- </noindex> -->
             </main>
             <footer class="footer">
-                <div class="container">
-                    <div class="social">
-                        <div class="social-block">
-                            <a href="https://vk.com/resultnn" target="_blank">
-                                <img src="img/vk_white.svg" alt="ВКонтакте" />
-                                <img src="img/vk_white.svg" alt="ВКонтакте" />
-                            </a>
+                <div class="container footer__container">
+                    <div class="footer__inner">
+                        <div class="social">
+                            <div class="social-block">
+                                <a href="https://vk.com/resultnn" target="_blank">
+                                    <img src="img/vk_white.svg" alt="ВКонтакте" />
+                                    <img src="img/vk_white.svg" alt="ВКонтакте" />
+                                    <img src="img/vk.svg" alt="ВКонтакте" />
+                                </a>
+                            </div>
+                            <div class="social-block">
+                                <a href="https://wa.me/79302666696" target="_blank">
+                                    <img src="img/wa_white.svg" alt="WhatsApp" />
+                                    <img src="img/wa_white.svg" alt="WhatsApp" />
+                                    <img src="img/wa.svg" alt="WhatsApp" />
+                                </a>
+                            </div>
+                            <div class="social-block">
+                                <a href="https://t.me/resultat_nn" target="_blank">
+                                    <img src="img/tg_white.svg" alt="Telegram" />
+                                    <img src="img/tg_white.svg" alt="Telegram" />
+                                    <img src="img/tg.svg" alt="Telegram" />
+                                </a>
+                            </div>
+                            <div class="social-block">
+                                <a href="https://viber.click/79302666696" target="_blank">
+                                    <img src="img/viber_white.svg" alt="Viber" />
+                                    <img src="img/viber_white.svg" alt="Viber" />
+                                    <img src="img/viber.svg" alt="Viber" />
+                                </a>
+                            </div>
+                            <div class="social-block">
+                                <a
+                                        href="https://www.youtube.com/channel/UC_mXnuSwxmQW4TkkMxTZ6Eg"
+                                        target="_blank"
+                                >
+                                    <img src="img/youtube_white.svg" alt="YouTube" />
+                                    <img src="img/youtube_white.svg" alt="YouTube" />
+                                    <img src="img/youtube.svg" alt="YouTube" />
+                                </a>
+                            </div>
                         </div>
-                        <div class="social-block">
-                            <a href="https://wa.me/79302666696" target="_blank">
-                                <img src="img/wa_white.svg" alt="WhatsApp" />
-                                <img src="img/wa_white.svg" alt="WhatsApp" />
-                            </a>
+                        <div class="footer__group">
+                            <p>
+                                <a href="policy.html" target="_blank">Политика обработки персональных данных</a>
+                            </p>
+                            <p>
+                                <a href="agreement.html" target="_blank">Согласие на обработку персональных данных</a>
+                            </p>
+                            <p>
+                                <a href="user_agreement.html" target="_blank">Пользовательское соглашение</a>
+                            </p>
+                            <p>
+                                <a href="authors.html" target="_blank">Авторство изображений и графики</a>
+                            </p>
                         </div>
-                        <div class="social-block">
-                            <a href="https://t.me/resultat_nn" target="_blank">
-                                <img src="img/tg_white.svg" alt="Telegram" />
-                                <img src="img/tg_white.svg" alt="Telegram" />
-                            </a>
-                        </div>
-                        <div class="social-block">
-                            <a href="https://viber.click/79302666696" target="_blank">
-                                <img src="img/viber_white.svg" alt="Viber" />
-                                <img src="img/viber_white.svg" alt="Viber" />
-                            </a>
-                        </div>
-                        <div class="social-block">
-                            <a
-                                href="https://www.youtube.com/channel/UC_mXnuSwxmQW4TkkMxTZ6Eg"
-                                target="_blank"
-                            >
-                                <img src="img/youtube_white.svg" alt="YouTube" />
-                                <img src="img/youtube_white.svg" alt="YouTube" />
-                            </a>
-                        </div>
+                        <p>Учебный центр “К результату” 2024</p>
                     </div>
-                    <p>Учебный центр “К результату” 2022</p>
                 </div>
             </footer>
         </div>
@@ -619,7 +618,8 @@
         <script src="lib/js/slick.min.js"></script>
         <script src="lib/js/inputmask.min.js"></script>
         <script src="lib/js/masked_input.min.js"></script>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+        <script src="lib/js/fancybox.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9b45cc67-bf94-4425-89cf-c09e6c3f1aed"></script>
         <script src="script.js"></script>
     </body>
 </html>
